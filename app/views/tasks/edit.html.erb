@@ -1,9 +1,19 @@
-<h1>Edit task</h1>
+<div class="container">
+  <h1>Edit task</h1>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, placeholder: @task.title %>
-  <%= f.label :details %>
-  <%= f.text_field :details, placeholder: @task.details %>
-  <%= f.submit value: "Edit Task"%>
-<% end %>
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: @task.title %> <br>
+
+    <%= f.label :details %>
+    <%= f.text_field :details, placeholder: @task.details %><br>
+
+    <%= f.label :completed %>
+    <%= f.check_box :completed %><br>
+
+    <%= f.submit value: "Edit Task"%>
+  <% end %>
+
+  <hr>
+
+</div>

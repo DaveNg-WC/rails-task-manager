@@ -1,10 +1,15 @@
-<h1><%= @task.title %></h1>
-<p><%= link_to "edit task", edit_task_path(@task)  %></p>
+<div class="container">
+  <h1><%= @task.title %></h1>
 
-<h3><%= @task.details %></h3>
+  <hr>
 
-<p>
-  <%= check_box_tag "completed", "completed", @task.completed %> <%= @done_text %>
-</p>
+  <h3><%= @task.details %></h3>
 
-<p><%= link_to "<-- Back to lists", tasks_path %></p>
+  <p>
+    <%= check_box_tag "completed", "completed", @task.completed %> <%= @done_text %>
+  </p>
+
+  <p><%= link_to "Edit task", edit_task_path(@task),:class => "btn btn-primary"  %></p>
+  <hr>
+  <p><%= link_to "<-- Back to lists", tasks_path %></p>
+</div>
